@@ -407,9 +407,9 @@ public void eliminarDevolucion(int idDevolucion) {
 
 // Metodo para  eliminar usuario
 public void eliminarUsuario(int idUsuario) {
-    Usuario usuario = buscarUsuarioPorId(idUsuario); // This method should work now
+    Usuario usuario = buscarUsuarioPorId(idUsuario); 
     if (usuario != null) {
-        usuarios.remove(usuario); // Use usuarios instead of listaUsuarios
+        usuarios.remove(usuario); 
         System.out.println("Usuario eliminado exitosamente.");
     } else {
         System.out.println("Usuario no encontrado.");
@@ -418,7 +418,7 @@ public void eliminarUsuario(int idUsuario) {
 
 // Meotodo para eliminar proveedor
 public void eliminarProveedor(int idProveedor) {
-    Proveedor proveedor = buscarProveedorPorId(idProveedor); // This method should work now
+    Proveedor proveedor = buscarProveedorPorId(idProveedor); 
     if (proveedor != null) {
         proveedores.remove(proveedor); // Use proveedores instead of listaProveedores
         System.out.println("Proveedor eliminado exitosamente.");
@@ -453,7 +453,7 @@ private Devolucion buscarDevolucionPorId(int idDevolucion) {
 private String obtenerFecha(Scanner scanner) {
     System.out.print("Ingrese fecha (YYYY-MM-DD): ");
     String fecha = scanner.nextLine();
-    // Optional: You could add validation for the date format here
+    
     return fecha;
 }
 
@@ -471,7 +471,7 @@ private Usuario buscarUsuarioPorId(int idUsuario) {
 //buscar proveedor por ID
 private Proveedor buscarProveedorPorId(int idProveedor) {
     for (Proveedor proveedor : proveedores) {
-        if (proveedor.getIdProveedor() == idProveedor) { // Assuming Proveedor has this method
+        if (proveedor.getIdProveedor() == idProveedor) { 
             return proveedor;
         }
     }
